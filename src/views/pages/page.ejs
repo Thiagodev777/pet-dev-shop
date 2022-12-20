@@ -4,11 +4,15 @@
     <h2><%-banner.title%> disponíveis para adoção</h2>
 <% } %>
 <div class="container list">
-    <div class="item">
-        <img src="images/pastor-alemao.jpg" class="item--image" />
-        <div class="item--name">Pastor-alemão</div>
-        <div class="item--color">Cor: Amarelo e Preto</div>
-        <div class="item--genre">Gênero: Masculino</div>
-    </div>
+
+    <% list.forEach(({type, image, name, color, sex}) => { %>
+        <div class="item">
+            <img src="images/<%= image %>" class="item--image" />
+            <div class="item--name"><%= name %></div>
+            <div class="item--color">Cor: <%= color %></div>
+            <div class="item--genre">Gênero: <%= sex %></div>
+        </div>
+    <% }); %>
+
 </div>
 <%- include('../partials/footer.ejs') %>
