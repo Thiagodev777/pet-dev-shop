@@ -18,19 +18,19 @@
 </header>
 <nav>
     <ul>
-        <li class="<% if(banner.menu === '/all') { %>
+        <li class="<% if(menu.all) { %>
             active
         <% } %>"><a href="/">Todos</a></li>
 
-        <li class="<% if(banner.menu === '/dogs') { %>
+        <li class="<% if(menu.dog) { %>
             active
         <% } %>"><a href="/dogs">Cachorros</a></li>
 
-        <li class="<% if(banner.menu === '/cats') { %>
+        <li class="<% if(menu.cat) { %>
             active
         <% } %>"><a href="/cats">Gatos</a></li>
 
-        <li class="<% if(banner.menu === '/fishes') { %>
+        <li class="<% if(menu.fish) { %>
             active
         <% } %>"><a href="/fishes">Peixes</a></li>
     </ul>
