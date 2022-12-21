@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+    <% if (list.length === 0) { %>
+        <div class="container no-list">
+            <h2 style="margin-top: 50px;">Não foi possivel encontrar nenhum resultado para esta solicitação.</h2>
+        </div>
+    <% } else { %>
+        <div class="container list"> 
+            <% list.forEach(({type, image, name, color, sex}) => { %>
+                <div class="item">
+                    <img src="images/<%= image %>" class="item--image" />
+                    <div class="item--name"><%= name %></div>
+                    <div class="item--color">Cor: <%= color %></div>
+                    <div class="item--genre">Gênero: <%= sex %></div>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+<%- include('../partials/footer.ejs') %>

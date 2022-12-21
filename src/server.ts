@@ -13,7 +13,5 @@ server.use(express.static(path.join(__dirname, '../public')));
 
 server.use(mainRoutes)
 
-
-
-server.use( (req, res) => res.sendStatus(404) )
+server.use( (req, res) => res.render('pages/404') )
 server.listen(process.env.PORT, () => console.log('server running'))
